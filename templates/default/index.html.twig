@@ -1,0 +1,28 @@
+{# ./template/default/index.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %} PHP Phone Verification with Twilio {% endblock %}
+
+{% block body %}
+    <div class="example-wrapper">
+        <div class="jumbotron text-center">
+
+            <h2> Verify phone numbers with Symfony4 and Twilio</h2>
+            <div>
+                {% if app.user %}
+
+                    <a href="{{ path('home') }}" class="btn btn-default">Home</a>
+
+                {% else %}
+                    <div class="button-links">
+                        <a href="{{ path('login') }}" class="btn btn-success">Login</a>
+                        <a href="{{ path('user_registration') }}" class="btn btn-primary">Register</a>
+                    </div>
+
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
